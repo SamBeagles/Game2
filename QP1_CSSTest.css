@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+  
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.board {
+    height: 85vh;
+    width: 80vw;
+    background-color:black;
+    border-radius: 14px;
+}
+  
+.ball {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    position: fixed;
+    top: calc(50% - 15px);
+    left: calc(50% - 15px);
+}
+  
+.ball_effect {
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    animation: spinBall 0.1s linear infinite;
+    box-shadow: inset 0 0 18px white, 
+        inset 6px 0 18px white, 
+        inset -6px 0 18px white, 
+        inset 6px 0 30px white, 
+        inset -6px 0 30px white, 
+        0 0 18px white, -4px 0 18px 
+        white, 4px 0 18px white;
+}
+  
+@keyframes spinBall {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+  
+.paddle {
+    height: 100px;
+    width: 18px;
+    border-radius: 10%;
+    position: fixed;
+}
+  
+.paddle_1 {
+    top: calc(7.5vh + 55px);
+    left: calc(10vw + 30px);
+    box-shadow: inset 0 0 18px white, 
+        inset -6px 0 18px white, 
+        inset 6px 0 18px white, 
+        inset -6px 0 30px white, 
+        inset 6px 0 30px white;
+}
+  
+.paddle_2 {
+    top: calc(85vh + 7.5vh - 100px - 55px);
+    right: calc(10vw + 30px);
+    box-shadow: inset 0 0 18px white, 
+    inset -6px 0 18px white, 
+    inset 6px 0 18px white, 
+    inset -6px 0 30px white, 
+    inset 6px 0 30px white;
+}
+.player_1{
+    height: 75px;
+    width: 75px;
+    color: white;
+    position: fixed;
+    left: 24vw;
+    margin-top: 30px;
+    font-size: 3vh;
+}
+.player_1_score {
+    height: 75px;
+    width: 75px;
+    color: white;
+    position: fixed;
+    left: 25vw;
+    margin-top: 50px;
+    font-size: 3vh;
+}
+.player_2{
+    height: 75px;
+    width: 75px;
+    color: white;
+    position: fixed;
+    left: 74vw;
+    margin-top: 30px;
+    font-size: 3vh;
+}
+.player_2_score {
+    height: 75px;
+    width: 75px;
+    color: white;
+    position: fixed;
+    left: 75vw;
+    margin-top: 50px;
+    font-size: 3vh;
+}
+  
+.message {
+    position: fixed;
+    height: 10vh;
+    width: 30vw;
+    color: white;
+    left: 42vw;
+    margin: 30px auto auto auto;
+}
+.victory{
+    font-family: 'Times New Roman', Times, serif;
+    -webkit-text-stroke:2px white;
+    position: fixed;
+    height: 90vh;
+    width: 85vw;
+    margin-left: -2vw;
+    color: black;
+    background-color:black;
+    text-align: center;
+    text-shadow:-8px 8px black,
+    -10px 10px white;
+    padding:10vh;
+    border-radius: 2%;
+    font-size:20vh;
+    cursor: default;
+    opacity: 0;
+}
+.link1{
+    font-size: 8vh;
+    -webkit-text-stroke:1px white;
+    color: black;
+    background-color:black;
+    text-shadow: -5px, 5px, white;
+    text-decoration: none;
+    pointer-events: none;
+   
+}
+.link2{
+    font-size: 8vh;
+    -webkit-text-stroke:1px white;
+    color: black;
+    background-color:black;
+    text-shadow: 5px, 5px, white;
+    text-decoration: none;
+    pointer-events: none;
+}
